@@ -2,6 +2,7 @@ import pytest
 
 import src.processing as processing
 
+
 #Тестирование функции filter_by_state из модуля src/processing.py
 @pytest.mark.parametrize("value, expected", [
     (

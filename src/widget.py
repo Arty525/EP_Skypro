@@ -1,6 +1,5 @@
 from masks import get_mask_account, get_mask_card_number
 
-
 def mask_account_card(input: str) -> str:
     """
     :param input: строка с типом данных и номером карты или счета (например Visa Platinum 7000792289606361)
@@ -23,8 +22,7 @@ def mask_account_card(input: str) -> str:
 
 def get_date(input_date: str) -> str:
     """
-    :param input_date: принимаемая строка даты в формате "2024-03-11T02:26:18.671407"
-    принимает на вход строку с датой в формате "2024-03-11T02:26:18.671407"
+    функция принимаемает на вход строку даты в формате "2024-03-11T02:26:18.671407"
      и возвращает строку с датой в формате "ДД.ММ.ГГГГ" ("11.03.2024").
     """
 
