@@ -1,5 +1,6 @@
 from src.masks import get_mask_account, get_mask_card_number
 
+
 def mask_account_card(input: str) -> str:
     """
     :param input: строка с типом данных и номером карты или счета (например Visa Platinum 7000792289606361)
