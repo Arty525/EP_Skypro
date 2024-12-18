@@ -1,4 +1,4 @@
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(input: str) -> str:
@@ -16,15 +16,14 @@ def mask_account_card(input: str) -> str:
         Счет **4305 # выход функции
     """
     if "Счет" in input:
-        return f"{input[0:len(input) - 20]} {get_mask_account(input[-20:])}"
+        return f"{input[0:len(input) - 20]}{get_mask_account(input[-20:])}"
     else:
-        return f"{input[0:len(input) - 16]} {get_mask_card_number(input[-16:])}"
+        return f"{input[0:len(input) - 16]}{get_mask_card_number(input[-16:])}"
 
 
 def get_date(input_date: str) -> str:
     """
-    :param input_date: принимаемая строка даты в формате "2024-03-11T02:26:18.671407"
-    принимает на вход строку с датой в формате "2024-03-11T02:26:18.671407"
+    функция принимаемает на вход строку даты в формате "2024-03-11T02:26:18.671407"
      и возвращает строку с датой в формате "ДД.ММ.ГГГГ" ("11.03.2024").
     """
 
@@ -32,6 +31,8 @@ def get_date(input_date: str) -> str:
 
     splited_date.reverse()
 
-    formated_date = ".".join(splited_date)[-10:]
+    splited_date[0] = splited_date[0][0:2]
+
+    formated_date = ".".join(splited_date)
 
     return formated_date

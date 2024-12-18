@@ -13,10 +13,10 @@ def filter_by_state(list_of_dict: list = [], state: str = "EXECUTED") -> list:
 
 
 def sort_by_date(list_of_dict: list, _reverse: bool = True) -> list:
-    '''
+    """
     Функция сортирует банковские операции по дате
     :param list_of_dict: входной список словарей;
     :param _reverse: параметр сортировки True - по убыванию, False - по возрастанию;
     :return: возвращается отсортированный список;
-    '''
+    """
     return sorted(list_of_dict, key=lambda _dict: _dict["date"], reverse=_reverse)
